@@ -1,3 +1,9 @@
+import { HomePage } from "../pages/home.js";
+import { RegisterPage } from "../pages/register.js";
+import { GroupsPage } from "../pages/groups.js";
+import { MatchesPage } from "../pages/matches.js";
+import { AdminPage } from "../pages/admin.js";
+import { PageLayout } from "../components/layout/pageLayout.js";
 const routes = {};
 
 let appRoot = null;
@@ -38,7 +44,7 @@ export function renderRoute() {
     return;
   }
 
-  appRoot.innerHTML = page();
+  appRoot.innerHTML = PageLayout(page());
 }
 
 /**
@@ -58,3 +64,12 @@ export function initializeRouter(root) {
 export function rerender() {
   renderRoute();
 }
+registerRoute("/", HomePage);
+
+registerRoute("/register", RegisterPage);
+
+registerRoute("/groups", GroupsPage);
+
+registerRoute("/matches", MatchesPage);
+
+registerRoute("/admin", AdminPage);

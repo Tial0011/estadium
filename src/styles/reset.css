@@ -1,0 +1,128 @@
+/* =========================================
+   MODERN CSS RESET
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   HTML / BODY
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background: var(--color-bg);
+
+  color: var(--color-text);
+
+  font-family: var(--font-primary);
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+}
+
+/* =========================================
+   MEDIA
+========================================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+
+  border: none;
+
+  outline: none;
+
+  background: none;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+  cursor: pointer;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* =========================================
+   LISTS
+========================================= */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================================
+   TABLES
+========================================= */
+
+table {
+  border-collapse: collapse;
+
+  width: 100%;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
