@@ -2,26 +2,21 @@ export function Navbar() {
   return `
     <header class="navbar">
 
-      <div class="navbar__left">
+      <div class="navbar__brand">
+
+        <a href="#/" class="navbar__logo">
+          <img
+             src="../../public/assest/Logo.png"
+            alt="E-Stadium Logo"
+          />
+        </a>
+      </div>
+
+      <nav class="navbar__menu">
+
         <a href="#/" class="nav-link">
           Home
         </a>
-      </div>
-
-      <div class="navbar__center">
-
-        <a href="#/" class="navbar__logo">
-
-          <img
-            src="../../public/assest/Logo.png"
-            alt="E-Stadium Logo"
-          />
-
-        </a>
-
-      </div>
-
-      <div class="navbar__right">
 
         <a href="#/groups" class="nav-link">
           Groups
@@ -35,7 +30,7 @@ export function Navbar() {
           Register
         </a>
 
-      </div>
+      </nav>
 
     </header>
   `;

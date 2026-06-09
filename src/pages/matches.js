@@ -1,4 +1,5 @@
 import { state } from "../core/state.js";
+import { Card } from "../components/ui/card.js";
 
 function formatDate(timestamp) {
   const date = new Date(timestamp);
@@ -7,39 +8,35 @@ function formatDate(timestamp) {
 }
 
 function renderMatch(match) {
-  return `
-    <div class="match-card">
+  return Card(`
+    <div class="match-card__top">
 
-      <div class="match-card__top">
+      <span class="match-group">
+        Group ${match.group}
+      </span>
 
-        <span class="match-group">
-          Group ${match.group}
-        </span>
+      <span class="match-date">
+        ${formatDate(match.playedAt)}
+      </span>
 
-        <span class="match-date">
-          ${formatDate(match.playedAt)}
-        </span>
+    </div>
 
+    <div class="match-score">
+
+      <div class="match-team">
+        ${match.homeTeam}
       </div>
 
-      <div class="match-score">
+      <div class="match-result">
+        ${match.homeGoals} - ${match.awayGoals}
+      </div>
 
-        <div class="match-team">
-          ${match.homeTeam}
-        </div>
-
-        <div class="match-result">
-          ${match.homeGoals} - ${match.awayGoals}
-        </div>
-
-        <div class="match-team">
-          ${match.awayTeam}
-        </div>
-
+      <div class="match-team">
+        ${match.awayTeam}
       </div>
 
     </div>
-  `;
+  `);
 }
 
 export function MatchesPage() {

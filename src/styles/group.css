@@ -1,0 +1,97 @@
+/* ==========================
+   GROUPS PAGE
+========================== */
+
+.groups-page {
+  width: 100%;
+}
+
+.groups-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+  gap: 24px;
+
+  margin-top: 32px;
+}
+
+/* ==========================
+   GROUP TITLE
+========================== */
+
+.group-title {
+  margin-bottom: 20px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: var(--accent-color);
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+.table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.table thead th {
+  text-align: left;
+
+  padding: 12px;
+
+  font-size: 0.85rem;
+
+  color: var(--text-secondary);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table tbody td {
+  padding: 12px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pts {
+  font-weight: 700;
+
+  color: var(--accent-color);
+}
+
+.empty {
+  text-align: center;
+
+  padding: 20px;
+
+  color: var(--text-secondary);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+  .groups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+}
